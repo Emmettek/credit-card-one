@@ -1,24 +1,12 @@
-@use 'reset';
-@use 'mixins' as m;
-@use 'variables' as v;
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: v.$font-family;
-}
-
-html {
-    font-size: 62.5%;
-}
+@use "reset";
+@use "mixins" as m;
+@use "variables" as v;
 
 body {
     position: relative;
-    display: flex;
-    align-items: center;
     height: 100vh;
-    font-size: 1.5rem;
+    height: 100svh;
+    font-size: 1rem;
     background-color: v.$white;
 }
 
@@ -31,7 +19,7 @@ body {
 .container {
     max-width: 1440px;
     width: 100%;
-    margin: auto;
+    margin: 0 auto;
 }
 
 .card {
@@ -68,7 +56,7 @@ body {
         position: absolute;
         bottom: 75px;
         left: 30px;
-        font-size: 2.5rem;
+        font-size: 1.5rem;
         font-family: v.$font-family;
         color: v.$white;
         letter-spacing: 5px;
@@ -78,7 +66,7 @@ body {
         position: absolute;
         bottom: 35px;
         left: 30px;
-        font-size: 1.5rem;
+        font-size: 1rem;
         font-family: v.$font-family;
         color: v.$white;
         text-transform: uppercase;
@@ -87,9 +75,9 @@ body {
 
     &__pin {
         position: absolute;
-        bottom: 47%;
+        bottom: 44%;
         right: 11%;
-        font-size: 2rem;
+        font-size: 1.5rem;
         font-family: v.$font-family;
         color: v.$white;
     }
@@ -101,7 +89,7 @@ body {
     &--year {
         position: absolute;
         bottom: 35px;
-        font-size: 1.5rem;
+        font-size: 1rem;
         font-family: v.$font-family;
         color: v.$white;
     }
@@ -121,7 +109,6 @@ body {
 
 .label {
     display: block;
-    margin-top: 10px;
     margin-bottom: 16px;
     color: v.$purple;
     font-family: v.$font-family;
@@ -131,14 +118,15 @@ body {
 
 .input {
     width: 100%;
-    padding: 1em;
-    margin-bottom: 1.5em;
+    padding: 0.8em;
+    margin-bottom: 1em;
     border: 1px solid gray;
     border-radius: 7px;
     cursor: text;
 
     &::placeholder {
-        font-size: 1.5rem;
+        font-size: 1rem;
+        font-family: v.$font-family;
     }
 
     &:focus-visible {
@@ -152,8 +140,9 @@ body {
     &__first,
     &__second {
         width: 80%;
-        padding: 1em;
+        padding: 0.8em;
         margin-right: 0.7em;
+        font-size: 1rem;
         border: v.$border-gray;
         border-radius: 7px;
         cursor: text;
@@ -167,6 +156,7 @@ body {
 .inputs__flex {
     display: flex;
     flex-direction: wrap;
+    font-family: v.$font-family;
 }
 
 .forms {
@@ -191,14 +181,10 @@ body {
         width: 80px;
         height: 80px;
         border-radius: 100%;
-        background: linear-gradient(
-            336deg,
-            rgba(99, 72, 254, 1) 0%,
-            rgba(97, 5, 149, 1) 100%
-        );
+        background: v.$gradient-checkmark;
 
         &::before {
-            content: '';
+            content: "";
             position: absolute;
             top: 28%;
             left: 40%;
@@ -217,7 +203,7 @@ body {
     margin-top: 5px;
     padding: 10px 0px;
     width: 100%;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: bold;
     color: v.$white;
     border-radius: 7px;

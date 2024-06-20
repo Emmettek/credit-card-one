@@ -7,6 +7,11 @@ $border-red: 1px solid red;
 $navy: rgb(0, 127, 255);
 $gray: rgb(128, 128, 128);
 $border-gray: 1px solid rgb(128, 128, 128);
+$gradient-checkmark: linear-gradient(
+    336deg,
+    rgba(99, 72, 254, 1) 0%,
+    rgba(97, 5, 149, 1) 100%
+);
 
 // FONTS
-$font-family: "Space Grotesk", sans-serif;
+$font-family: 'Space Grotesk', sans-serif;
