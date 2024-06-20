@@ -1,0 +1,250 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  font-size: 1.5rem;
+  background-color: rgb(255, 255, 255);
+}
+
+.img__bg {
+  position: absolute;
+  width: 35%;
+  height: 100%;
+}
+
+.container {
+  max-width: 1440px;
+  width: 100%;
+  margin: auto;
+}
+
+.card__front {
+  position: absolute;
+  left: 15%;
+  top: 13%;
+}
+.card__front--img {
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+}
+.card__front--logo {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  z-index: 2;
+}
+.card__back {
+  position: absolute;
+  left: 25%;
+  bottom: 10%;
+}
+.card__back--img {
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+}
+.card__number {
+  position: absolute;
+  bottom: 75px;
+  left: 30px;
+  font-size: 2.5rem;
+  font-family: "Space Grotesk", sans-serif;
+  color: rgb(255, 255, 255);
+  letter-spacing: 5px;
+}
+.card__person {
+  position: absolute;
+  bottom: 35px;
+  left: 30px;
+  font-size: 1.5rem;
+  font-family: "Space Grotesk", sans-serif;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+.card__pin {
+  position: absolute;
+  bottom: 47%;
+  right: 11%;
+  font-size: 2rem;
+  font-family: "Space Grotesk", sans-serif;
+  color: rgb(255, 255, 255);
+}
+
+.card__date--month, .card__date--divider, .card__date--year {
+  position: absolute;
+  bottom: 35px;
+  font-size: 1.5rem;
+  font-family: "Space Grotesk", sans-serif;
+  color: rgb(255, 255, 255);
+}
+.card__date--month {
+  right: 85px;
+}
+.card__date--divider {
+  right: 75px;
+}
+.card__date--year {
+  right: 30px;
+}
+
+.label {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 16px;
+  color: rgb(33, 9, 47);
+  font-family: "Space Grotesk", sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.input {
+  width: 100%;
+  padding: 1em;
+  margin-bottom: 1.5em;
+  border: 1px solid gray;
+  border-radius: 7px;
+  cursor: text;
+}
+.input::-moz-placeholder {
+  font-size: 1.5rem;
+}
+.input::placeholder {
+  font-size: 1.5rem;
+}
+.input:focus-visible {
+  border: 1.5px solid rgb(33, 9, 47);
+}
+.input:hover {
+  border: 1.5px solid rgb(0, 127, 255);
+}
+.input__first, .input__second {
+  width: 80%;
+  padding: 1em;
+  margin-right: 0.7em;
+  border: 1px solid rgb(128, 128, 128);
+  border-radius: 7px;
+  cursor: text;
+}
+.input__first:hover, .input__second:hover {
+  border: 1.5px solid rgb(0, 127, 255);
+}
+
+.inputs__flex {
+  display: flex;
+  flex-direction: wrap;
+}
+
+.forms {
+  position: absolute;
+  top: 25%;
+  left: 60%;
+  width: 25%;
+}
+
+.form__flex {
+  display: flex;
+  gap: 0.1em;
+}
+
+.complete {
+  font-family: "Space Grotesk", sans-serif;
+  color: rgb(33, 9, 47);
+  letter-spacing: 3px;
+}
+.complete__icon {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  background: linear-gradient(336deg, rgb(99, 72, 254) 0%, rgb(97, 5, 149) 100%);
+}
+.complete__icon::before {
+  content: "";
+  position: absolute;
+  top: 28%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  transform: rotate(45deg);
+  height: 24px;
+  width: 12px;
+  border-bottom: 7px solid rgb(255, 255, 255);
+  border-right: 7px solid rgb(255, 255, 255);
+}
+
+.btn {
+  margin-top: 5px;
+  padding: 10px 0px;
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  border-radius: 7px;
+  background-color: rgb(33, 9, 47);
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */
