@@ -1,8 +1,9 @@
-@use 'reset';
-@use 'mixins' as m;
-@use 'variables' as v;
+@use "reset";
+@use "mixins" as m;
+@use "variables" as v;
 
 * {
+    // ❌ to za mało. Dodaj ::before, ::after
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -10,28 +11,29 @@
 }
 
 html {
-    font-size: 62.5%;
+    font-size: 62.5%; // ❌ Wydaje mi się, że Ci mówiłem dlaczego powinnaś unikać tej praktyki
 }
 
 body {
     position: relative;
     display: flex;
     align-items: center;
-    height: 100vh;
+    height: 100vh; // ❌ vh!!!! Używaj vh TYLKO jako fallback! Do tego radzę używać svh.
+    // height: 100vh; height: 100svh; ✅
     font-size: 1.5rem;
     background-color: v.$white;
 }
 
 .img__bg {
     position: absolute;
-    width: 35%;
+    width: 35%; // Nie cierpie robienia tego w ten sposób. Masz grida od tworzenia szkieletu, całej struktury strony.
     height: 100%;
 }
 
 .container {
     max-width: 1440px;
     width: 100%;
-    margin: auto;
+    margin: auto; // margin: auto ❌ | margin-inline ✅ | margin: 0 auto ✅
 }
 
 .card {
@@ -84,7 +86,7 @@ body {
         text-transform: uppercase;
         letter-spacing: 5px;
     }
-
+    // Te elementy mają wspólne właściwości. Zastanów sie co powinnaś zrobić.
     &__pin {
         position: absolute;
         bottom: 47%;
@@ -195,10 +197,10 @@ body {
             336deg,
             rgba(99, 72, 254, 1) 0%,
             rgba(97, 5, 149, 1) 100%
-        );
+        ); // Gradient trzymaj w kolorach (w zmiennych).
 
         &::before {
-            content: '';
+            content: "";
             position: absolute;
             top: 28%;
             left: 40%;
@@ -222,5 +224,23 @@ body {
     color: v.$white;
     border-radius: 7px;
     background-color: v.$purple;
-    cursor: pointer;
+    cursor: pointer; // Gdybyś korzystała z normalnego resetu, nie musiałabyś o to dbać. :). Tu polecam reset Tailwindowy, mimo, że jest spory - to jest bardzo dobry. Tu będzie to nic innego jak przerost formy nad treścią, ale w życiu nie będziesz budowała tak "małych stron", myśl już o tym teraz.
+    @include m.xs {
+        color: #ff0000; // xs to Twój "domyślny" styl (masz ustawiony max-width i żadnych warunków więcej). Możesz sie go wyzbyć, bo i tak będziesz stylowała tak jak na górze.
+    }
+    @include m.sm {
+        color: #008000;
+    }
+    @include m.md {
+        color: #0000ff;
+    }
+    @include m.lg {
+        color: #ffd700;
+    }
+    @include m.xl {
+        color: #ff00ff;
+    }
+    @include m.xxl {
+        color: #00ffff;
+    }
 }

@@ -12,6 +12,7 @@
 </head>
 
 <body>
+    <!-- ❌ Brak tagu main -->
     <img src="./img/bg-main-desktop.png" alt="background image for the desktop view" class="img__bg">
     <img src="./img/bg-main-mobile.png" alt="background image for the mobile view" class="img__bg--xs">
 
@@ -60,11 +61,15 @@
                             <input name="expiry__year" type="text" placeholder="YYYY" class="input__second" id="date">
                         </div>
                         <p class="invalid invalid--3"></p>
+
                     </div>
                     <div class="form__item form__item-4">
                         <label for="pin" class="label">CVC</label>
                         <input type="text" placeholder="123" id="pin" class="input">
                         <p class="invalid invalid--4"></p>
+                        <!-- Dlaczego każdy invalid ma inną klase? (--1, --2, --3, --4) Tu powinnaś zarządzać klasą error, kiedy jest aktywna. Jeśli nie jest aktywna, to invalid jest pusty (domyślny stan jaki jest tutaj), jeśli aktywna - jest treść, jest czerwono i jest git. 
+                            
+                            To jak nazwiesz tą klase, invalid--active // error--active nie ma większego znaczenia, ważne by było wiadomo o co chodzi.-->
                     </div>
                 </div>
 
@@ -78,6 +83,7 @@
                 </div> -->
 
                 <button type="submit" class="btn" id="btn__submit">Confirm</button>
+                <!-- ❌ Po co tu ID, type="submit"? Tu powinien być input o typie submit -->
             </div>
 
         </section>
