@@ -1,5 +1,5 @@
-@use 'reset';
-@use 'variables' as v;
+@use "reset";
+@use "variables" as v;
 
 @mixin xs {
     @media (max-width: 576px) {
