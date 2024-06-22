@@ -12,76 +12,78 @@
 </head>
 
 <body>
-    <img src="./img/bg-main-desktop.png" alt="background image for the desktop view" class="img__bg">
-    <img src="./img/bg-main-mobile.png" alt="background image for the mobile view" class="img__bg--xs">
+    <main>
+        <img src="./img/bg-main-desktop.png" alt="background image for the desktop view" class="img__bg">
+        <img src="./img/bg-main-mobile.png" alt="background image for the mobile view" class="img__bg--xs">
 
-    <div class="container">
-        <section class="card">
-            <div class="card__front">
-                <img src="./img/bg-card-front.png" alt="image of the front of the card" class="card__front--img">
-                <img src="https://interactive-card-details-form.vercel.app/assets/card-logo.c6566e76.svg"
-                    alt="logo in front of the card" class="card__front--logo">
-                <p class="card__number">0000 0000 0000 0000</p>
-                <p class="card__person">Katie Holmes</p>
-                <p class="card__date--month">00</p>
-                <p class="card__date--divider">/</p>
-                <p class="card__date--year">0000</p>
-            </div>
+        <div class="container">
+            <section class="card">
+                <div class="card__front">
+                    <img src="./img/bg-card-front.png" alt="image of the front of the card" class="card__front--img">
+                    <img src="https://interactive-card-details-form.vercel.app/assets/card-logo.c6566e76.svg"
+                        alt="logo in front of the card" class="card__front--logo">
+                    <p class="card__number">0000 0000 0000 0000</p>
+                    <p class="card__person">Katie Holmes</p>
+                    <p class="card__date--month">00</p>
+                    <p class="card__date--divider">/</p>
+                    <p class="card__date--year">0000</p>
+                </div>
 
-            <div class="card__back">
-                <img src="./img/bg-card-back.png" alt="image of the back of the card" class="card__back--img">
-                <p class="card__pin">000</p>
-            </div>
-        </section>
+                <div class="card__back">
+                    <img src="./img/bg-card-back.png" alt="image of the back of the card" class="card__back--img">
+                    <p class="card__pin">000</p>
+                </div>
+            </section>
 
-        <section class="card__details">
-            <div class="forms">
-                <div class="flex__form">
-                    <form action="#" class="form">
+            <section class="card__details">
+                <div class="forms">
+                    <div class="flex__form">
+                        <form action="#" class="form">
+                            <div class="form__item">
+                                <label for="name" class="label">Cardholder Name</label>
+                                <input name="name" type="text" placeholder="e.g. Katie Holmes" id="name" class="input">
+                                <p class="error"></p>
+                            </div>
+                            <div class="form__item">
+                                <label for="number" class="label">Card Number</label>
+                                <input name="number" type="text" placeholder="e.g. 1234 5678 9123 0000" id="number__card"
+                                    class="input">
+                                <p class="error"></p>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="form__flex">
                         <div class="form__item">
-                            <label for="name" class="label">Cardholder Name</label>
-                            <input name="name" type="text" placeholder="e.g. Katie Holmes" id="name" class="input">
+                            <label for="date" class="label">EXP.DATE(MM/YYYY)</label>
+                            <div class="inputs__flex">
+                                <input name="expiry__month" type="text" placeholder="MM" class="input__first" id="date">
+                                <input name="expiry__year" type="text" placeholder="YYYY" class="input__second" id="date">
+                            </div>
                             <p class="error"></p>
                         </div>
                         <div class="form__item">
-                            <label for="number" class="label">Card Number</label>
-                            <input name="number" type="text" placeholder="e.g. 1234 5678 9123 0000" id="number__card"
-                                class="input">
+                            <label for="pin" class="label">CVC</label>
+                            <input type="text" placeholder="123" id="pin" class="input">
                             <p class="error"></p>
                         </div>
-                    </form>
-                </div>
+                    </div>
 
-                <div class="form__flex">
-                    <div class="form__item">
-                        <label for="date" class="label">EXP.DATE(MM/YYYY)</label>
-                        <div class="inputs__flex">
-                            <input name="expiry__month" type="text" placeholder="MM" class="input__first" id="date">
-                            <input name="expiry__year" type="text" placeholder="YYYY" class="input__second" id="date">
+                    <!-- <div class="complete hidden">
+                        <div class="complete__icon">
                         </div>
-                        <p class="error"></p>
-                    </div>
-                    <div class="form__item">
-                        <label for="pin" class="label">CVC</label>
-                        <input type="text" placeholder="123" id="pin" class="input">
-                        <p class="error"></p>
-                    </div>
+                        <div class="complete__text">
+                            <h3>Thank You!</h3>
+                            <p>We've added your card details</p>
+                        </div>
+                    </div> -->
+
+                    <button type="submit" class="btn" id="btn__submit">Confirm</button>
                 </div>
 
-                <!-- <div class="complete hidden">
-                    <div class="complete__icon">
-                    </div>
-                    <div class="complete__text">
-                        <h3>Thank You!</h3>
-                        <p>We've added your card details</p>
-                    </div>
-                </div> -->
-
-                <button type="submit" class="btn" id="btn__submit">Confirm</button>
-            </div>
-
-        </section>
-    </div>
+            </section>
+        </div>
+    </main>
     <script src="./js/script.js"></script>
 </body>
 

@@ -259,6 +259,12 @@ body {
   width: 35%;
   height: 100%;
 }
+@media (min-width: 576px) {
+  .img__bg--xs {
+    display: block;
+    max-width: 100%;
+  }
+}
 
 .container {
   max-width: 1440px;
@@ -290,32 +296,27 @@ body {
   border-radius: 12px;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
 }
-.card__number {
+.card__number, .card__person, .card__pin {
   position: absolute;
+  font-family: "Space Grotesk", sans-serif;
+  color: rgb(255, 255, 255);
+  letter-spacing: 3px;
+}
+.card__number {
   bottom: 75px;
   left: 30px;
   font-size: 1.5rem;
-  font-family: "Space Grotesk", sans-serif;
-  color: rgb(255, 255, 255);
-  letter-spacing: 5px;
 }
 .card__person {
-  position: absolute;
   bottom: 35px;
   left: 30px;
   font-size: 1rem;
-  font-family: "Space Grotesk", sans-serif;
-  color: rgb(255, 255, 255);
   text-transform: uppercase;
-  letter-spacing: 5px;
 }
 .card__pin {
-  position: absolute;
   bottom: 44%;
   right: 11%;
   font-size: 1.5rem;
-  font-family: "Space Grotesk", sans-serif;
-  color: rgb(255, 255, 255);
 }
 
 .card__date--month, .card__date--divider, .card__date--year {
@@ -427,6 +428,7 @@ body {
   margin-top: 5px;
   padding: 10px 0px;
   width: 100%;
+  font-family: "Space Grotesk", sans-serif;
   font-size: 1rem;
   font-weight: bold;
   color: rgb(255, 255, 255);

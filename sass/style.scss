@@ -14,6 +14,28 @@ body {
     position: absolute;
     width: 35%;
     height: 100%;
+
+    @include m.md {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    &--xs {
+        @include m.sm {
+            padding: 1em;
+            display: block;
+            max-width: 100%;
+        }
+
+        @include m.md {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+    }
 }
 
 .container {
@@ -46,40 +68,38 @@ body {
         left: 25%;
         bottom: 10%;
 
+        
+
         &--img {
             border-radius: 12px;
             box-shadow: v.$box-shadow 0px 20px 30px;
         }
     }
 
-    &__number {
+    &__number, &__person, &__pin {
         position: absolute;
+        font-family: v.$font-family;
+        color: v.$white;
+        letter-spacing: 3px;
+    }
+
+    &__number {
         bottom: 75px;
         left: 30px;
         font-size: 1.5rem;
-        font-family: v.$font-family;
-        color: v.$white;
-        letter-spacing: 5px;
     }
 
     &__person {
-        position: absolute;
         bottom: 35px;
         left: 30px;
         font-size: 1rem;
-        font-family: v.$font-family;
-        color: v.$white;
         text-transform: uppercase;
-        letter-spacing: 5px;
     }
 
     &__pin {
-        position: absolute;
         bottom: 44%;
         right: 11%;
         font-size: 1.5rem;
-        font-family: v.$font-family;
-        color: v.$white;
     }
 }
 
@@ -151,6 +171,14 @@ body {
             border: 1.5px solid v.$navy;
         }
     }
+
+    @include m.sm {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
 }
 
 .inputs__flex {
@@ -203,6 +231,7 @@ body {
     margin-top: 5px;
     padding: 10px 0px;
     width: 100%;
+    font-family: v.$font-family;
     font-size: 1rem;
     font-weight: bold;
     color: v.$white;
