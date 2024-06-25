@@ -1,6 +1,12 @@
 @use "reset";
 @use "variables" as v;
 
+@mixin xs {
+    @media (max-width: 576px) {
+      @content;
+    }
+  }
+
 @mixin sm {
     @media (min-width: 576px) {
         @content;

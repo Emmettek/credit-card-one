@@ -8,6 +8,11 @@ body {
     height: 100svh;
     font-size: 1rem;
     background-color: v.$white;
+
+    @include m.xs {
+        max-width: 100%;
+        min-height: 50em;
+    }
 }
 
 .img__bg {
@@ -15,25 +20,30 @@ body {
     width: 35%;
     height: 100%;
 
+    @include m.xs {
+        display: none;
+    }
+    @include m.sm {
+        display: none;
+    }
+
     @include m.md {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
+        display: block;
+        width: 40%;
+        min-height: 100%;
     }
 
     &--xs {
+        @include m.xs {
+            width: 100%;
+        }
+
         @include m.sm {
-            padding: 1em;
-            display: block;
-            max-width: 100%;
+            width: 100%;
         }
 
         @include m.md {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
+            display: none;
         }
     }
 }
@@ -49,6 +59,29 @@ body {
         position: absolute;
         left: 15%;
         top: 13%;
+
+        @include m.xs {
+            transform: scale(.75);
+            z-index: 1;
+        }
+
+        @include m.sm {
+            top: 13%;
+            left: 0;
+            // transform: scale(.75);
+        }
+
+        @include m.md {
+            position: fixed;
+            top: 20%;
+            left: 25%;
+            // transform: scale(.85);
+        }
+
+        @include m.xxl {
+            top: 20%;
+            left: 20%;
+        }
 
         &--img {
             border-radius: 12px;
@@ -68,7 +101,29 @@ body {
         left: 25%;
         bottom: 10%;
 
-        
+        @include m.xs {
+            top: 0.1%;
+            left: 3%;
+            transform: scale(.75);
+        }
+
+        @include m.sm {
+            top: 2%;
+            left: 5%;
+            // transform: scale(.75);
+        }
+
+        @include m.md {
+            position: fixed;
+            top: 45%;
+            left: 25%;
+            // transform: scale(.85);
+        }
+
+        @include m.xxl {
+            top: 50%;
+            left: 30%;
+        }
 
         &--img {
             border-radius: 12px;
@@ -97,9 +152,13 @@ body {
     }
 
     &__pin {
-        bottom: 44%;
+        bottom: 62%;
         right: 11%;
         font-size: 1.5rem;
+
+        @include m.md {
+            bottom: 66%;
+        }
     }
 }
 
@@ -170,16 +229,29 @@ body {
         &:hover {
             border: 1.5px solid v.$navy;
         }
+
+        @include m.xs {
+            padding: 0.6em;
+            font-size: 0.8rem;
+        }
     }
 
-    @include m.sm {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
+    @include m.xs {
+        padding: 0.6em;
+        font-size: 0.8rem;
     }
+
+    // @include m.sm {
+        
+        // position: absolute;
+        // top: 50%;
+        // left: 50%;
+        // transform: translate(-50%, -50%);
+        // margin-top: 10em;
+        // padding: 2em;
+    // }
 }
+
 
 .inputs__flex {
     display: flex;
@@ -191,12 +263,32 @@ body {
     position: absolute;
     top: 25%;
     left: 60%;
-    width: 25%;
+    // width: 25%;
+
+    @include m.xs {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        // position: absolute;
+        // top: 50%;
+        // left: 50%;
+        // transform: translate(-50%, -50%);
+        margin-top: 10em;
+    }
 }
 
 .form__flex {
     display: flex;
     gap: 0.1em;
+}
+
+.form__item {
+
+    @include m.xs {
+        width: 100%;
+    }
+    
 }
 
 .complete {
@@ -238,4 +330,8 @@ body {
     border-radius: 7px;
     background-color: v.$purple;
     cursor: pointer;
+
+    @include m.xs {
+        width: 100%;
+    }
 }
